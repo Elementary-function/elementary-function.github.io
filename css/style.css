@@ -102,6 +102,7 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 0% 45%;
   display: block;
 }
 
@@ -111,6 +112,14 @@ a:hover {
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.3;
+}
+
+.name-en {
+  margin: -2px 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
 }
 
 .tagline {
@@ -156,37 +165,29 @@ a:hover {
 }
 
 .socials {
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
   margin-bottom: 24px;
 }
 
 .socials a {
-  width: 36px;
-  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
   border: 1px solid var(--border);
-  border-radius: 9px;
-  display: grid;
-  place-items: center;
-  transition: border-color 0.18s, background 0.18s;
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--text-2);
+  transition: border-color 0.18s, background 0.18s, color 0.18s;
 }
 
 .socials a:hover {
   background: var(--accent-soft);
   border-color: var(--border-strong);
+  color: var(--accent);
   text-decoration: none;
-}
-
-.socials svg {
-  width: 17px;
-  height: 17px;
-  fill: var(--text-2);
-}
-
-.socials svg.stroke-icon {
-  fill: none;
-  stroke: var(--text-2);
-  stroke-width: 1.7;
 }
 
 .sidebar-nav {
@@ -259,7 +260,7 @@ section > h2::after {
 
 .tl-item {
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
+  grid-template-columns: 110px minmax(0, 1fr);
   gap: 20px;
   padding-bottom: 24px;
   position: relative;
@@ -268,7 +269,7 @@ section > h2::after {
 .tl-item:not(:last-child)::before {
   content: "";
   position: absolute;
-  left: 111px;
+  left: 129px;
   top: 18px;
   bottom: -2px;
   width: 1px;
@@ -318,6 +319,101 @@ section > h2::after {
   color: var(--text-2);
 }
 
+/* ---------- 论文 ---------- */
+
+.pubs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: pub;
+}
+
+.pub {
+  position: relative;
+  padding: 18px 0 18px 36px;
+  border-top: 1px solid var(--border);
+}
+
+.pub:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.pub::before {
+  counter-increment: pub;
+  content: "[" counter(pub) "]";
+  position: absolute;
+  left: 0;
+  top: 19px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+.pub-title {
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.pub-authors {
+  margin-bottom: 3px;
+  font-size: 13.5px;
+  color: var(--text-2);
+}
+
+.pub-authors .me {
+  color: var(--text);
+  font-weight: 600;
+  border-bottom: 1.5px solid var(--accent);
+}
+
+.pub-venue {
+  font-size: 13.5px;
+  color: var(--text-3);
+}
+
+.pub-venue em {
+  font-style: normal;
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.pub-tags span {
+  font-size: 11.5px;
+  color: var(--text-3);
+  background: var(--accent-soft);
+  border-radius: 5px;
+  padding: 1px 7px;
+}
+
+.pub-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 11px;
+}
+
+.pub-links a {
+  font-size: 12px;
+  color: var(--accent);
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  padding: 2px 10px;
+  transition: background 0.18s;
+}
+
+.pub-links a:hover {
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
 /* ---------- 项目卡片 ---------- */
 
 .cards {
@@ -343,19 +439,23 @@ section > h2::after {
 
 .card-head {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 8px;
 }
 
 .card h3 {
   margin: 0;
+  min-width: 0;
   font-size: 14.5px;
   font-weight: 600;
+  line-height: 1.5;
 }
 
 .badge {
+  flex: none;
+  margin-top: 2px;
   font-size: 11px;
   color: var(--accent);
   background: var(--accent-soft);
@@ -694,15 +794,19 @@ section > h2::after {
     border-radius: 16px;
     font-size: 26px;
     margin-bottom: 0;
-    grid-row: span 3;
+    grid-row: span 4;
   }
 
   .name {
     font-size: 19px;
   }
 
+  .name-en {
+    margin: -2px 0 2px;
+  }
+
   .tagline {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 
   .motto {
