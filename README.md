@@ -7,7 +7,6 @@
 ```
 index.html          主页（单页，所有板块都在这里）
 css/style.css       全站样式
-blog/*.html         随笔，每篇一个 HTML
 files/*.pdf         论文 PDF，供下载
 images/             照片
 .nojekyll           告诉 GitHub Pages 跳过 Jekyll，别删
@@ -42,10 +41,7 @@ PDF 放进 `files/`，文件名用英文小写加连字符，再把 `pub-links` 
 
 **加一个项目**
 复制 `<article class="card">`，改标题、描述、标签和链接。
-
-**加一篇随笔**
-复制 `blog/hello-world.html`，改 `<title>`、`<h1>`、`<time>` 和正文。
-再回 `index.html` 的「随笔」板块，复制一个 `<li>` 改成新链接。
+右上角的 `<span class="badge">` 写你的角色，比如「项目骨干」「参与」「主持」。
 
 **改配色**
 `css/style.css` 最上面的 `:root` 里改 `--accent`（强调色）和 `--bg`（背景色）。

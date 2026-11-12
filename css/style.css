@@ -544,52 +544,6 @@ section > h2::after {
   padding: 3px 10px;
 }
 
-/* ---------- 文章列表 ---------- */
-
-.posts {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.posts li + li {
-  border-top: 1px solid var(--border);
-}
-
-.posts a {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 13px 2px;
-  color: var(--text);
-  transition: color 0.18s;
-}
-
-.posts a:hover {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.posts a > span {
-  flex: 1;
-  min-width: 0;
-}
-
-.posts time {
-  font-size: 12.5px;
-  color: var(--text-3);
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
-.posts .excerpt {
-  display: block;
-  font-size: 13.5px;
-  color: var(--text-3);
-  margin-top: 2px;
-}
-
 /* ---------- 页脚 ---------- */
 
 .footer {
