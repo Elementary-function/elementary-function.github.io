@@ -1,164 +1,194 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo ZY - Hey world</title><meta name="keywords" content="克己"><meta name="author" content="main function"><meta name="copyright" content="main function"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="功在平时">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo ZY">
-<meta property="og:url" content="http://elementary.github.io./index.html">
-<meta property="og:site_name" content="Hexo ZY">
-<meta property="og:description" content="功在平时">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
-<meta property="article:author" content="main function">
-<meta property="article:tag" content="克己">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://elementary.github.io./"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Hexo ZY',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2022-07-10 17:48:15'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Main Function</title>
+<meta name="description" content="Main Function 的个人主页 — 做过的项目，写过的字。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
+<div class="layout">
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
+  <!-- ==================== 左侧栏 ==================== -->
+  <aside class="sidebar">
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
+    <!-- 头像：有照片就把下面这行 div 换成
+         <a class="avatar"><img src="images/profile.jpg" alt=""></a> -->
+    <div class="avatar">M</div>
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo ZY</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo ZY</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/Elementary-function" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/07/10/hello%20zxy/" title="姑娘，你好呀"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="姑娘，你好呀"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/07/10/hello%20zxy/" title="姑娘，你好呀">姑娘，你好呀</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-07-10T07:55:27.694Z" title="发表于 2022-07-10 15:55:27">2022-07-10</time></span></div><div class="content">第一次在自己搭建的网站上上传个人博客，所以就来写一下鹤小刘吧~~哈哈哈~~
+    <!-- ① 改成你的名字 -->
+    <h1 class="name">Main Function</h1>
+    <p class="tagline">写代码，也写字</p>
+    <p class="motto">功在平时</p>
 
+    <ul class="meta">
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <span>中国</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+        <!-- ② 改成你的邮箱，放在 href 和文字两处 -->
+        <span><a href="mailto:1946809464@qq.com">1946809464@qq.com</a></span>
+      </li>
+    </ul>
 
+    <div class="socials">
+      <a href="https://github.com/Elementary-function" title="GitHub" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+      </a>
+      <a href="mailto:1946809464@qq.com" title="邮箱">
+        <svg class="stroke-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="5.5" width="18.4" height="13" rx="1.6"/><path d="M3.2 6.4L12 12.8l8.8-6.4"/></svg>
+      </a>
+      <!-- 想加知乎 / 掘金 / B站，照着上面复制一个 <a> 再换链接和图标即可 -->
+    </div>
 
-前情提要：你是你，我是我
+    <nav class="sidebar-nav">
+      <a href="#about">关于我</a>
+      <a href="#experience">经历</a>
+      <a href="#projects">项目</a>
+      <a href="#skills">技能</a>
+      <a href="#writing">文章</a>
+      <a href="#contact">联系</a>
+    </nav>
 
-一、时间线2021/7/14:第一次加这个小女孩的QQ，挺高冷的哈，回了一句行，之后就没下文了
-2021/9/22：第一被人叫父亲，我也很高兴，这个小女孩也认我这个老父亲了，哈哈哈哈，嗯对这个不一般的女孩有了一点兴趣
-2021/10/9：第一次加微信，跟这个女孩聊天，挺傻，喜欢发缺了两个门牙的大熊猫大笑的表情包，别人回复一下，她肯定也会回复，不过现在再也不会那样了。
-2021/10/14：跟这个女孩表白吧，也是我第一次这么认真，反正我也不是很会谈恋爱吧，哈哈哈，可能这也是下面事情的发生的起因吧
-2022/5/19-20：嗯，挺重要的一天，分手吧，也挺好，让我措手不及，也让我成长了很多，也很谢谢这个小姑娘，让我知道了世界是自己的，与他人无关，这一次，只不过是恢复原状罢了，我本来就是一无所有。
-2022/6/15：那夜，那晚，凉亭，你我，第一次
-二、喜好2.1 饮食喜欢吃辣，不能太辣，中辣即可不喜欢甜酱，喜欢吃米饭，但不喜欢喝粥，带汤的面也不太喜欢，不喜欢喝汤喜欢吃蛋挞，橘子，香蕉 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/02/09/hello-world/" title="Hello World"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/02/09/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-09T06:29:37.633Z" title="发表于 2021-02-09 14:29:37">2021-02-09</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-More info: Writing
-Run server1$ hexo server
-More info: Server
-Generate static files1$ hexo generate
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-More info: Deployment
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">main function</div><div class="author-info__description">功在平时</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Elementary-function"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Elementary-function" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/10/hello%20zxy/" title="姑娘，你好呀"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="姑娘，你好呀"/></a><div class="content"><a class="title" href="/2022/07/10/hello%20zxy/" title="姑娘，你好呀">姑娘，你好呀</a><time datetime="2022-07-10T07:55:27.694Z" title="发表于 2022-07-10 15:55:27">2022-07-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/09/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2021/02/09/hello-world/" title="Hello World">Hello World</a><time datetime="2021-02-09T06:29:37.633Z" title="发表于 2021-02-09 14:29:37">2021-02-09</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-07-10T09:48:15.494Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By main function</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+  </aside>
+
+  <!-- ==================== 右侧主内容 ==================== -->
+  <main>
+
+    <section id="about">
+      <h2>👋 关于我</h2>
+      <p class="lead">这里是我的个人主页。</p>
+      <p class="lead">写代码，也写字。做过的项目放在下面，写过的文章也有几篇 —— 虽然不多。</p>
+      <p class="lead">我相信<strong>「功在平时」</strong>：大部分结果都不是某一天的爆发，而是平时一点点攒出来的。所以这个网站也是攒出来的，从 2021 年那篇 Hello World 开始。</p>
+    </section>
+
+    <section id="experience">
+      <h2>🧭 经历</h2>
+      <!-- 找工作或教育经历：复制一个 <div class="tl-item">，改日期、标题和描述。
+           格式：<div class="tl-date">2023.09 — 2026.06</div> -->
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-date">2026</div>
+          <div class="tl-body">
+            <h3>个人网站重构</h3>
+            <p>把 Hexo 博客迁成纯静态单页站。去掉构建步骤和主题依赖，整个站点只有一个 HTML 和一个 CSS。</p>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">2022.07</div>
+          <div class="tl-body">
+            <h3>写下第一篇博客</h3>
+            <p>开始把想说的话写下来。比起发在社交平台上，放在自己的域名下更安心一点。</p>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">2021.02</div>
+          <div class="tl-body">
+            <h3>搭起第一个个人网站</h3>
+            <p>用 Hexo 加 Butterfly 主题上线，第一次把东西放到公网上。地址是 elementary-function.github.io，一直用到现在。</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>🛠 项目</h2>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-head">
+            <h3>这个网站</h3>
+            <span class="badge">进行中</span>
+          </div>
+          <p>从 Hexo 迁移而来的纯静态站点。单页锚点导航，无框架、无构建、无外部依赖，改完 push 就上线。</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>GitHub Pages</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Elementary-function/elementary-function.github.io" target="_blank" rel="noopener">源码 →</a>
+          </div>
+        </article>
+
+        <!-- 复制上面整个 <article class="card"> 加项目，改标题、描述、技术栈和链接 -->
+        <a class="card card-hint" href="#projects">
+          <div>＋ 把你的项目放这里</div>
+        </a>
+
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>📚 技能</h2>
+      <dl class="skills">
+        <div class="skill-row">
+          <dt>语言与标记</dt>
+          <dd>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Markdown</span>
+          </dd>
+        </div>
+        <div class="skill-row">
+          <dt>工具与平台</dt>
+          <dd>
+            <span class="chip">Git</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">GitHub Pages</span>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="writing">
+      <h2>✍️ 文章</h2>
+      <ul class="posts">
+        <li>
+          <a href="blog/hello-zxy.html">
+            <span>
+              姑娘，你好呀
+              <span class="excerpt">第一次在自己搭建的网站上写博客，写的是一个女孩。</span>
+            </span>
+            <time datetime="2022-07-10">2022-07-10</time>
+          </a>
+        </li>
+        <li>
+          <a href="blog/hello-world.html">
+            <span>
+              Hello World
+              <span class="excerpt">这个网站的第一篇，Hexo 的默认欢迎文。</span>
+            </span>
+            <time datetime="2021-02-09">2021-02-09</time>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>📮 联系</h2>
+      <p class="lead">想聊点什么，邮件最快。GitHub 上的 Issue 和 PR 也都会看。</p>
+      <p class="lead">
+        <a href="mailto:1946809464@qq.com">1946809464@qq.com</a> ·
+        <a href="https://github.com/Elementary-function" target="_blank" rel="noopener">github.com/Elementary-function</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <span>© 2021–2026 Main Function</span>
+      <span>用 HTML 和 CSS 手写</span>
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>
